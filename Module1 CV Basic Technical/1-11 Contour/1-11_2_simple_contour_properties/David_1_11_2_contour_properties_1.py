@@ -1,9 +1,6 @@
+
 # python David_1_11_2_contour_properties_1.py --image "../../../../CV-PyImageSearch Gurus Course/Dataset/data/more_shapes.png"
-# https://chtseng.wordpress.com/2016/12/05/opencv-contour%E8%BC%AA%E5%BB%93/
-
-
-# David_1_11_2_contour_properties_1.py --image "
-
+# reference : https://chtseng.wordpress.com/2016/12/05/opencv-contour%E8%BC%AA%E5%BB%93/
 
 # 1.Preprocessing : 
     # 1.1import the necessary packages
@@ -35,7 +32,12 @@ clone = image.copy()
 
 for i in cnts:
 	# compute the moments of the contour which can be used to compute the centroid or "center of mass" of the region
-	M = cv2.moments(i)
+
+"""一）標示中心點：
+
+要取得Contour中心點，可使用OpenCV的moments（矩）函式，這是一個關於矩的計算函式。矩，又稱動差，英文為moment，"""
+
+	M = cv2.moments(i) 
 	cX = int(M["m10"] / M["m00"])
 	cY = int(M["m01"] / M["m00"])
 

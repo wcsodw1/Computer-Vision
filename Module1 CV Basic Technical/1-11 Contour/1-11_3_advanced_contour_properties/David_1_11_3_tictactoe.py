@@ -4,13 +4,12 @@
 # python David_1_11_3_tictactoe.py --image "../../../../CV-PyImageSearch Gurus Course/Dataset/data/titac.jpg"
 
 
-# 不太實用!
+# 不太實用!(應該說 要針對甚麼類型的東西 並自行定義它的形狀是屬於甚麼分類)
 
 # import the necessary packages
 import cv2
 import imutils
 import argparse
-
 
 
 # load the tic-tac-toe image and convert it to grayscale

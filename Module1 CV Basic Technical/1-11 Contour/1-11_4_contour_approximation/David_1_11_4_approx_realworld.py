@@ -1,6 +1,3 @@
-# python David_1_11_4_approx_realworld.py --image "../../../data/receipt.png"
-# python David_1_11_4_approx_realworld.py --image "../../../data/dog_contour.png"
-
 # python David_1_11_4_approx_realworld.py --image "../../../../CV-PyImageSearch Gurus Course/Dataset/data/dog_contour.png"
 # python David_1_11_4_approx_realworld.py --image "../../../../CV-PyImageSearch Gurus Course/Dataset/data/receipt.png
 # python David_1_11_4_approx_realworld.py --image "../../../../CV-PyImageSearch Gurus Course/Dataset/data/a.jpg
