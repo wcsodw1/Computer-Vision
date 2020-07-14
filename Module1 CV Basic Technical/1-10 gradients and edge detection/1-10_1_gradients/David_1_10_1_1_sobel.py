@@ -1,7 +1,7 @@
 # USAGE
-# python David_1_10_1_1_sobel.py --image "../../data/jared.JPG"
-# python David_1_10_1_1_sobel.py --image "../../../../CV-PyImageSearch Gurus Course/Dataset/data/opera.JPG"
-# python David_1_10_1_1_sobel.py --image "../../../../CV-PyImageSearch Gurus Course/Dataset/data/a.jpg"
+# python David_1_10_1_1_sobel.py --image "../../../../CV_PyImageSearch/Dataset/data/jared.JPG"
+# python David_1_10_1_1_sobel.py --image "../../../../CV_PyImageSearch/Dataset/data/opera.JPG"
+# python David_1_10_1_1_sobel.py --image "../../../../CV_PyImageSearch/Dataset/data/a.jpg"
 
 # import the necessary packages
 import argparse

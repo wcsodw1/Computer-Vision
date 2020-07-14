@@ -1,2 +1,2 @@
 # Computer-Vision
-PyimageSearch Course Project with AIA Academy CV project
+My PyimageSearch-Optimized Project & AIA Academy CV project
