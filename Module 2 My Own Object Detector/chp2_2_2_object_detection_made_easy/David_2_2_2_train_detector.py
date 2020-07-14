@@ -1,8 +1,4 @@
-# (Set your own Path and File name) python David_2_2_2_train_detector.py --class "../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp2_2_stop_sign/stop_sign_images" --annotations "../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp2_2_stop_sign/stop_sign_annotations" --output "../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp2_2_stop_sign/output/stop_sign_detector.svm"
-
-# (Set your own Path and File name) python David_2_2_2_train_detector.py --class "../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp2_2_elephant/TrainImage" --annotations "../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp2_2_elephant/annotation" --output "../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp2_2_elephant/Detector/elephant_detector.svm"
-
-
+# python David_2_2_2_train_detector.py --class "../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp2_2_stop_sign/stop_sign_images --annotations ../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp2_2_stop_sign/stop_sign_annotations --output ../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp2_2_stop_sign/output/2020_StopSignTest.svm'
 # import the necessary packages
 from __future__ import print_function
 from imutils import paths
@@ -28,7 +24,8 @@ ap.add_argument("-o", "--output", required=True,
 
 # import sys 
 # sys.argv[1:] = '-c stop_sign_images -a stop_sign_annotations -o output/stop_sign_detector.svm'.split()
-# sys.argv[1:] = '-c ../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp2_2_stop_sign/stop_sign_images -a ../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp2_2_stop_sign/stop_sign_annotations -o ../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp2_2_stop_sign/output/2020_StopSignTest.svm'.split()
+# sys.argv[1:] = '-c Airplane/image -a Airplane/annotations -o Airplane/output/airplane.svm'.split()
+sys.argv[1:] = '-c ../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp2_2_stop_sign/stop_sign_images -a ../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp2_2_stop_sign/stop_sign_annotations -o ../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp2_2_stop_sign/output/2020_StopSignTest.svm'.split()
 
 args = vars(ap.parse_args())
 
@@ -53,13 +50,12 @@ for imagePath in paths.list_images(args["class"]):
     imageID = id2.replace(".jpg", "")
     #print(imageID)
     str = imageID[6:]
-#     #print(str)
-#     #dir= "./Airplane1/annotations/"
-#     dir= "./stop_sign_annotations/"
-#     #print(dir)
-#     #p = "{}annotation_{}.mat".format(dir, str)
-    p = "{}/annotation_{}.mat".format(args["annotations"], imageID[6:])
-    print(p)
+    #print(str)
+    #dir= "./Airplane1/annotations/"
+    dir= "./stop_sign_annotations/"
+    #print(dir)
+    p = "{}annotation_{}.mat".format(dir, str)
+    #print(p)
     annotations = loadmat(p)["box_coord"]
     #print(annotations)
     bb = [dlib.rectangle(left=long(x), top=long(y), right=long(w), bottom=long(h)) 
