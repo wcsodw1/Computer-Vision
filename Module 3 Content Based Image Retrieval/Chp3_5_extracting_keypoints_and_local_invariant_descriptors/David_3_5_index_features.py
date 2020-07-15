@@ -4,8 +4,8 @@
 
 # import the necessary packages
 from __future__ import print_function
-from pyimagesearch.descriptors import DetectAndDescribe
-from pyimagesearch.indexer import FeatureIndexer
+from SubModule.descriptors import DetectAndDescribe
+from SubModule.indexer import FeatureIndexer
 from imutils.feature import FeatureDetector_create, DescriptorExtractor_create
 from imutils import paths
 import argparse
