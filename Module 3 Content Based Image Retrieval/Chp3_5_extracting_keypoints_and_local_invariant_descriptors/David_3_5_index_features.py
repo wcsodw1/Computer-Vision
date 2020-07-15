@@ -1,6 +1,6 @@
 # USAGE
 
-# python David_3_5_index_features.py --dataset "../../../CV_PyImageSearch/Dataset/ukbench" --output_hdf5 ""../../../CV_PyImageSearch/Dataset/Chapter_Specific/features.hdf5"
+# python David_3_5_index_features.py --dataset "../../../CV_PyImageSearch/Dataset/ukbench" --output_hdf5 ""../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp3_5_extract_keypoints/features.hdf5"
 
 # import the necessary packages
 from __future__ import print_function
@@ -38,7 +38,6 @@ dad = DetectAndDescribe(detector, descriptor)
 fi = FeatureIndexer(args["output_hdf5"], estNumImages=args["approx_images"],
 	maxBufferSize=args["max_buffer_size"], verbose=True)
 
-
 # loop over the images in the dataset
 for (i, imagePath) in enumerate(sorted(paths.list_images(args["dataset"]))):
 	# check to see if progress should be displayed
@@ -47,7 +46,8 @@ for (i, imagePath) in enumerate(sorted(paths.list_images(args["dataset"]))):
 
 	# extract the image filename (i.e. the unique image ID) from the image
 	# path, then load the image itself
-	filename = imagePath[imagePath.rfind("/") + 1:]
+	filename = imagePath[imagePath.rfind("/") + 1:]   
+	print(filename)
 	image = cv2.imread(imagePath)
 	image = imutils.resize(image, width=320)
 	image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
