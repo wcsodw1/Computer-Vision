@@ -5,7 +5,7 @@ Created on Thu Apr 16 14:35:33 2020
 @author: user
 """
 
-# python David_4_6_cluster_features.py --features-db "../../CV_PyImageSearch/Dataset/Chapter_Specific/chp_4_6_BOVW_Classification/features.hdf5" --codebook "../../CV_PyImageSearch/Dataset/Chapter_Specific/chp_4_6_BOVW_Classification/vocab.cpickle" --clusters 512 --percentage 0.25
+# python David_4_6_cluster_features.py --features-db "../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp_4_6_BOVW_Classification/features.hdf5" --codebook "../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp_4_6_BOVW_Classification/vocab.cpickle" --clusters 512 --percentage 0.25
 
 # python David_4_6_cluster_features.py --features-db output/features.hdf5 --codebook output/vocab.cpickle --clusters 512 --percentage 0.25
 
@@ -14,7 +14,7 @@ Created on Thu Apr 16 14:35:33 2020
 
     # 1.1 import the necessary packages
 from __future__ import print_function
-from pyimagesearch.ir import Vocabulary
+from SubModule.ir import Vocabulary
 import argparse
 import pickle
 import sys

@@ -7,15 +7,15 @@ Created on Thu Apr 16 12:50:58 2020
 
 # USAGE
 
-# python David_4_6_index_features.py --dataset "../../CV_PyImageSearch/Dataset/caltech5" --features-db "../../CV_PyImageSearch/Dataset/Chapter_Specific/chp_4_6_BOVW_Classification/features.hdf5" --approx-images 500
+# python David_4_6_index_features.py --dataset "../../../CV_PyImageSearch/Dataset/caltech5" --features-db "../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp_4_6_BOVW_Classification/features.hdf5" --approx-images 500
 
 # python python David_4_6_index_features.py --dataset caltech5 --features-db output/features.hdf5 --approx-images 500
 
 # 1.Preprocessing : 
     # 1.1 import the necessary packages
 from __future__ import print_function
-from pyimagesearch.descriptors import DetectAndDescribe
-from pyimagesearch.indexer import FeatureIndexer
+from SubModule.descriptors import DetectAndDescribe
+from SubModule.indexer import FeatureIndexer
 from imutils.feature import FeatureDetector_create, DescriptorExtractor_create
 from imutils import paths
 import argparse

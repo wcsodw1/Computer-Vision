@@ -4,13 +4,13 @@ Created on Thu Apr 16 15:40:07 2020
 
 @author: user
 """
-# python David_4_6_extract_bovw.py --features-db "../../CV_PyImageSearch/Dataset/Chapter_Specific/chp_4_6_BOVW_Classification/features.hdf5" --codebook "../../CV_PyImageSearch/Dataset/Chapter_Specific/chp_4_6_BOVW_Classification/vocab.cpickle" --bovw-db "../../CV_PyImageSearch/Dataset/Chapter_Specific/chp_4_6_BOVW_Classification/bovw.hdf5"
+# python David_4_6_extract_bovw.py --features-db "../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp_4_6_BOVW_Classification/features.hdf5" --codebook "../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp_4_6_BOVW_Classification/vocab.cpickle" --bovw-db "../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp_4_6_BOVW_Classification/bovw.hdf5"
 
 # 1.Preprocessing
 
     # 1.1 import the necessary packages
-from pyimagesearch.ir import BagOfVisualWords
-from pyimagesearch.indexer import BOVWIndexer
+from SubModule.ir import BagOfVisualWords
+from SubModule.indexer import BOVWIndexer
 import h5py
 import pickle
 import argparse

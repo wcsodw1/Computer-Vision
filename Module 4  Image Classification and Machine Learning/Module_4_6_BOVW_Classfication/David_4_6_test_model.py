@@ -4,15 +4,14 @@ Created on Thu Apr 16 21:53:02 2020
 
 @author: user
 """
-# python David_4_6_test_model.py --images "../../CV_PyImageSearch/Dataset/Chapter_Specific/chp_4_6_BOVW_Classification/test_images" --codebook "../../CV_PyImageSearch/Dataset/Chapter_Specific/chp_4_6_BOVW_Classification/vocab.cpickle" --model "../../CV_PyImageSearch/Dataset/Chapter_Specific/chp_4_6_BOVW_Classification/model.cpickle"
+# (Set your own Path with image)python David_4_6_test_model.py --images "../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp_4_6_BOVW_Classification/test_images" --codebook "../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp_4_6_BOVW_Classification/vocab.cpickle" --model "../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp_4_6_BOVW_Classification/model.cpickle"
 
-
-# python David_4_6_test_model.py --images test_images --codebook "../../CV_PyImageSearch/Dataset/Chapter_Specific/chp_4_6_BOVW_Classification/vocab.cpickle" --model "../../CV_PyImageSearch/Dataset/Chapter_Specific/chp_4_6_BOVW_Classification/model.cpickle"
+#python David_4_6_test_model.py --images test_images --codebook "../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp_4_6_BOVW_Classification/vocab.cpickle" --model "../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp_4_6_BOVW_Classification/model.cpickle"
 
     # import the necessary packagess
 from __future__ import print_function
-from pyimagesearch.descriptors import DetectAndDescribe
-from pyimagesearch.ir import BagOfVisualWords
+from SubModule.descriptors import DetectAndDescribe
+from SubModule.ir import BagOfVisualWords
 from imutils.feature import FeatureDetector_create, DescriptorExtractor_create
 from imutils import paths
 
