@@ -68,7 +68,6 @@ for imagePath in imagePaths:
    trueLabels.append(Label1)
    print("i=",i,"imagePath=",imagePath,"Label[1]=", Label1)
    i=i+1
-    
    # trueLabels.append(imagePath.split("/")[-2])
 
 	# load the image and prepare it from description
@@ -85,17 +84,21 @@ for imagePath in imagePaths:
 # show a classification report
 print(classification_report(trueLabels, predictedLabels))
 
-for i in np.random.choice(np.arange(0, len(imagePaths)), size=(20,), replace=False):
+for i in np.random.choice(np.arange(0, len(imagePaths)), size=(30,), replace=False):
 	# load the image and show the prediction
 	image = cv2.imread(imagePaths[i])
 
 	# show the prediction
 	filename = imagePaths[i][imagePaths[i].rfind("/") + 1:]
+	print("filename",filename)
+	#print(predictedLabels)
 	print("[PREDICTION] {}: {}".format(filename, predictedLabels[i]))
 	cv2.putText(image, predictedLabels[i], (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1.0,
 		(0, 255, 0), 2)
+	image = cv2.resize(image, (600,800), interpolation = cv2.INTER_CUBIC)
 	cv2.imshow("Image", image)
 	cv2.waitKey(2000)
 	cv2.destroyAllWindows()
     
 print(classification_report(trueLabels, predictedLabels))
+
