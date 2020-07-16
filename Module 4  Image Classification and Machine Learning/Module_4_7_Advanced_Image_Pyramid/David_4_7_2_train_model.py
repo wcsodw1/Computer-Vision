@@ -4,8 +4,7 @@ Created on Sat Apr 18 21:50:26 2020
 
 @author: user
 """
-# python David_4_7_2_train_model.py --dataset output/data/training --features-db output/training_features.hdf5 \
-#	--pbow-db output/training_pbow.hdf5 --model output/model.cpickle
+# python David_4_7_2_train_model.py --dataset output/data/training --features-db output/training_features.hdf5 --pbow-db output/training_pbow_pyramid2.hdf5 --model output/model.cpickle
 
     # import the necessary packages
 from __future__ import print_function
@@ -54,9 +53,11 @@ print("[INFO] loading data...")
 
 # prepare the labels by removing the filename from the image ID, leaving
 # us with just the class name
-trainLabels = [l.split("\\")[2] for l in trainLabels]
-testLabels = [l.split("\\")[2] for l in testLabels]
-
+trainLabels = [l.split("\\")[1] for l in trainLabels]
+print("trainLabels : ", trainLabels)
+print("")
+testLabels = [l.split("\\")[1] for l in testLabels]
+print("testLabels:",testLabels)
 # define the grid of parameters to explore, then start the grid search where
 # we evaluate a Linear SVM for each value of C
 print("[INFO] tuning hyperparameters...")
@@ -76,14 +77,16 @@ for i in np.random.choice(np.arange(300, 375), size=(20,), replace=False):
 	# randomly grab a testing image, load it, and classify it
 	(label, filename) = featuresDB["image_ids"][i].split(":")
 	label ='output\\' + label
+	print(label)
 	image = cv2.imread("{}/{}".format(label, filename))
+	print(image)
 	prediction = model.predict(bovwDB["bovw"][i].reshape(1, -1))[0]
-
+	print(prediction)
 	# show the prediction
 	print("[PREDICTION] {}:{}".format(filename, prediction))
 	cv2.putText(image, prediction, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0, 255, 0), 2)
 	cv2.imshow("Image", image)
-	cv2.waitKey(1000)	   
+	cv2.waitKey(2000)	   
 	cv2.destroyAllWindows()
 
 

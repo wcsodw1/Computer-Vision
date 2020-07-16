@@ -8,6 +8,8 @@ Created on Sat Apr 18 11:36:38 2020
 # split training and testing data into folder 
 
 # python David_4_7_2_sample_dataset.py --input ~/PyImageSearch/Datasets/caltech5 --output output/data --training-size 0.75
+# python David_4_7_2_sample_dataset.py --input "../../../CV_PyImageSearch/Dataset/caltech5" --output "output/data" --training-size 0.75
+
 
 # 1.Preprocessing
     
@@ -30,7 +32,9 @@ ap.add_argument("-o", "--output", required=True,
 ap.add_argument("-t", "--training-size", type=float, default=0.75,
 	help="% of images to use for training data")
 
-sys.argv[1:] = '-i ../../caltech5 -o output/data -t 0.75'.split()
+sys.argv[1:] = '-i ../../../CV_PyImageSearch/Dataset/caltech5 -o output/data -t 0.75'.split()
+# sys.argv[1:] = '-i ../../../CV_PyImageSearch/Dataset/caltech5 -o ../../../CV_PyImageSearch -t 0.75'.split()
+
 args = vars(ap.parse_args())
 
 
@@ -38,25 +42,27 @@ args = vars(ap.parse_args())
 if os.path.exists(args["output"]):
 	shutil.rmtree(args["output"]) # shutil.rmtree 刪除目錄和下面的所有檔案 使用
     
-    # 1.4 (!!) create the output directories
+    # 1.4 (!!) create the output directories : 創建自己想要的檔案及路徑
 os.makedirs(args["output"])
 os.makedirs("{}/training".format(args["output"]))
 os.makedirs("{}/testing".format(args["output"]))
 
+
 # 2.loop over the image classies in the input directory
-    
-for labelPath in glob.glob(args["input"] + "/*"):
+for labelPath in glob.glob(args["input"] + "\\*"):
 	# extract the label from the path and create the sub-directories for the label in
 	# the output directory
-	label = labelPath[labelPath.rfind("/") + 1:]
+	label = labelPath[labelPath.rfind("\\") + 1:] # File caltech5 往後數一個資料夾中裡面的資料 
+	print(label)
 	os.makedirs("{}/training/{}".format(args["output"], label))
 	os.makedirs("{}/testing/{}".format(args["output"], label))
 
 	# grab the image paths for the current label and shuffle them
 	imagePaths = list(paths.list_images(labelPath))
+	print(imagePaths) # Grab all the image in the folder and save to "labelPath"
 	random.shuffle(imagePaths)
 	i = int(len(imagePaths) * args["training_size"])
-
+	print(i)
 	# loop over the randomly sampled training paths and copy them into the appropriate
 	# output directory
 	for imagePath in imagePaths[:i]:

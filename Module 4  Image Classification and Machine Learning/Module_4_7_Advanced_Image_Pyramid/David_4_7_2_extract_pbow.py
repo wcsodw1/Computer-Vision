@@ -1,6 +1,14 @@
-# USAGE
-# python extract_pbow.py --features-db output/training_features.hdf5 --codebook output/vocab.cpickle \
-#	--levels 2 --pbow-db output/training_pbow.hdf5
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Apr 18 15:00:32 2020
+
+@author: user
+"""
+
+# python David_4_7_2_extract_pbow.py --features-db output/training_features.hdf5 --codebook output/vocab.cpickle --levels 2 --pbow-db output/training_pbow.hdf5
+# python David_4_7_2_extract_pbow.py --features-db output/training_features.hdf5 --codebook output/vocab.cpickle --levels 3 --pbow-db output/training_pbow3.hdf5
+
+
 
 # import the necessary packages
 from pyimagesearch.ir import BagOfVisualWords
@@ -9,6 +17,7 @@ from pyimagesearch.descriptors import PBOW
 import argparse
 import pickle
 import h5py
+import sys
 
 # construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()
@@ -22,19 +31,28 @@ ap.add_argument("-s", "--max-buffer-size", type=int, default=100,
 	help="Maximum buffer size for # of features to be stored in memory")
 ap.add_argument("-l", "--levels", type=int, default=2,
 	help="# of pyramid levels to generate")
+
+sys.argv[1:] = '-f output/training_features.hdf5 -c output/vocab.cpickle -l 3 -b output/training_pbow.hdf5'.split()
 args = vars(ap.parse_args())
+
 
 # load the codebook vocabulary, then initialize the bag-of-visual-words transformer
 # and the pyramid of bag-of-visual-words descriptor
 vocab = pickle.loads(open(args["codebook"], "rb").read())
+print(vocab)
 bovw = BagOfVisualWords(vocab)
+print(bovw)
 pbow = PBOW(bovw, numLevels=args["levels"])
+print(pbow)
 
 # open the features database and initialize the bag-of-visual-words indexer
 featureDim = PBOW.featureDim(bovw.codebook.shape[0], args["levels"])
+print(featureDim)
 featuresDB = h5py.File(args["features_db"], mode="r")
+print(featuresDB)
 bi = BOVWIndexer(featureDim, args["pbow_db"], estNumImages=featuresDB["image_ids"].shape[0],
 	maxBufferSize=args["max_buffer_size"])
+print(bi)
 
 # loop over the image IDs
 for (i, imageID) in enumerate(featuresDB["image_ids"]):
@@ -53,10 +71,15 @@ for (i, imageID) in enumerate(featuresDB["image_ids"]):
 	kps = featuresDB["features"][start:end][:, :2]
 	descs = featuresDB["features"][start:end][:, 2:]
 	hist = pbow.describe(w, h, kps, descs)
-
+    
 	# add the bag-of-visual-words to the index
 	bi.add(hist)
+
+print(kps)
+print(descs)
+print(hist)
 
 # close the features database and finish the indexing process
 featuresDB.close()
 bi.finish()
+
