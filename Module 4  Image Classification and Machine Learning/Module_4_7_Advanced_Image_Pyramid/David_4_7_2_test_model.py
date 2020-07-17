@@ -4,9 +4,8 @@ Created on Sun Apr 19 13:47:29 2020
 
 @author: user
 """
-# python David_4_7_2_test_model.py --images output/data/testing --codebook output/vocab.cpickle --levels 2 --model output/model.cpickle
-# python David_4_7_2_test_model.py --images "../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp_4_7_AdvancedImagePyramid/output/data/testing" --codebook "../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp_4_7_AdvancedImagePyramid/output/vocab.cpickle" --levels 2 --model "../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp_4_7_AdvancedImagePyramid/output/model.cpickle"
-
+# python David_4_7_2_test_model.py --images "output/data/testing" --codebook "output/vocab.cpickle" --levels 2 --model "output/model_L3.cpickle"
+# python David_4_7_2_test_model.py
 
 # import the necessary packages
 from __future__ import print_function
@@ -34,7 +33,7 @@ ap.add_argument("-l", "--levels", type=int, default=2,
 ap.add_argument("-m", "--model", required=True,
 	help="Path to the classifier")
 
-#sys.argv[1:] = '-i output/data/training -c output/vocab.cpickle -l 2 -m output/model.cpickle'.split()
+sys.argv[1:] = '-i output/data/testing -c output/vocab.cpickle -l 4 -m output/model_L4.cpickle'.split()
 args = vars(ap.parse_args())
 
 # initialize the keypoint detector, local invariant descriptor, and the descriptor
@@ -93,9 +92,9 @@ for i in np.random.choice(np.arange(0, len(imagePaths)), size=(30,), replace=Fal
 	print("filename",filename)
 	#print(predictedLabels)
 	print("[PREDICTION] {}: {}".format(filename, predictedLabels[i]))
-	cv2.putText(image, predictedLabels[i], (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1.0,
+	cv2.putText(image, predictedLabels[i], (30, 50), cv2.FONT_HERSHEY_SIMPLEX, 1.0,
 		(0, 255, 0), 2)
-	image = cv2.resize(image, (600,800), interpolation = cv2.INTER_CUBIC)
+	image = cv2.resize(image, (500,700), interpolation = cv2.INTER_CUBIC)
 	cv2.imshow("Image", image)
 	cv2.waitKey(2000)
 	cv2.destroyAllWindows()

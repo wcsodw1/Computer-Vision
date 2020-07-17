@@ -8,8 +8,8 @@ Created on Sat Apr 18 11:36:38 2020
 # split training and testing data into folder 
 
 # python David_4_7_2_sample_dataset.py --input ~/PyImageSearch/Datasets/caltech5 --output output/data --training-size 0.75
-# python David_4_7_2_sample_dataset.py --input "../../../CV_PyImageSearch/Dataset/caltech5" --output "output/data" --training-size 0.75
-
+# python David_4_7_2_sample_dataset.py --input "../../../CV_PyImageSearch/Dataset/caltech5" --output output/data --training-size 0.75
+# python David_4_7_2_sample_dataset.py
 
 # 1.Preprocessing
     
@@ -33,7 +33,7 @@ ap.add_argument("-t", "--training-size", type=float, default=0.75,
 	help="% of images to use for training data")
 
 sys.argv[1:] = '-i ../../../CV_PyImageSearch/Dataset/caltech5 -o output/data -t 0.75'.split()
-# sys.argv[1:] = '-i ../../../CV_PyImageSearch/Dataset/caltech5 -o ../../../CV_PyImageSearch -t 0.75'.split()
+# sys.argv[1:] = '-i ../../../CV_PyImageSearch/Dataset/caltech5 -o ../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp_4_7_AdvancedImagePyramid/output/data -t 0.75'.split()
 
 args = vars(ap.parse_args())
 

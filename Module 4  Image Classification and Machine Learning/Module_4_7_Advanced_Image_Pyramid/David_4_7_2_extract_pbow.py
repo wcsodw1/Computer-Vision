@@ -5,9 +5,9 @@ Created on Sat Apr 18 15:00:32 2020
 @author: user
 """
 
-# python David_4_7_2_extract_pbow.py --features-db output/training_features.hdf5 --codebook output/vocab.cpickle --levels 2 --pbow-db output/training_pbow.hdf5
-# python David_4_7_2_extract_pbow.py --features-db output/training_features.hdf5 --codebook output/vocab.cpickle --levels 3 --pbow-db output/training_pbow3.hdf5
+# python David_4_7_2_extract_pbow.py --features-db "output/training_features.hdf5" --codebook "output/vocab.cpickle" --levels 2 --pbow-db "output/training_pbow.hdf5"
 
+# python David_4_7_2_extract_pbow.py --features-db "output/training_features.hdf5" --codebook "output/vocab.cpickle" --levels 3 --pbow-db "output/training_pbow_l3.hdf5"
 
 
 # import the necessary packages
@@ -32,7 +32,7 @@ ap.add_argument("-s", "--max-buffer-size", type=int, default=100,
 ap.add_argument("-l", "--levels", type=int, default=2,
 	help="# of pyramid levels to generate")
 
-sys.argv[1:] = '-f output/training_features.hdf5 -c output/vocab.cpickle -l 3 -b output/training_pbow.hdf5'.split()
+sys.argv[1:] = '-f output/training_features.hdf5 -c output/vocab.cpickle -l 4 -b output/training_pbow_L4.hdf5'.split()
 args = vars(ap.parse_args())
 
 

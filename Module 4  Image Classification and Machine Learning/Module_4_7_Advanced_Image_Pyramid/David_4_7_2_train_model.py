@@ -4,7 +4,8 @@ Created on Sat Apr 18 21:50:26 2020
 
 @author: user
 """
-# python David_4_7_2_train_model.py --dataset output/data/training --features-db output/training_features.hdf5 --pbow-db output/training_pbow_pyramid2.hdf5 --model output/model.cpickle
+# python David_4_7_2_train_model.py --dataset output/data/training --features-db output/training_features.hdf5 --pbow-db output/training_pbow_.hdf5 --model output/model_l4.cpickle
+# python David_4_7_2_train_model.py 
 
     # import the necessary packages
 from __future__ import print_function
@@ -38,7 +39,7 @@ ap.add_argument("-p", "--pbow-db", required=True,
 ap.add_argument("-m", "--model", required=True,
 	help="Path to the output classifier")
 
-sys.argv[1:] = '-d output/data/training -f output/training_features.hdf5 -p output/training_pbow.hdf5 -m output/model.cpickle'.split()
+sys.argv[1:] = '-d output/data/training -f output/training_features.hdf5 -p output/training_pbow_L4.hdf5 -m output/model_L4.cpickle'.split()
 args = vars(ap.parse_args())
 
 # open the features and bag-of-visual-words databases
@@ -84,7 +85,8 @@ for i in np.random.choice(np.arange(300, 375), size=(20,), replace=False):
 	print(prediction)
 	# show the prediction
 	print("[PREDICTION] {}:{}".format(filename, prediction))
-	cv2.putText(image, prediction, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0, 255, 0), 2)
+	cv2.putText(image, prediction, (30, 50), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0, 255, 0), 2)
+	image = cv2.resize(image, (450,600), interpolation = cv2.INTER_CUBIC)
 	cv2.imshow("Image", image)
 	cv2.waitKey(2000)	   
 	cv2.destroyAllWindows()

@@ -6,6 +6,7 @@ Created on Sat Apr 18 13:02:47 2020
 """
 
 # python David_4_7_2_index_features.py --dataset output/data/training --features-db output/training_features.hdf5
+# python David_4_7_2_index_features.py
 
 # import the necessary packages
 from __future__ import print_function
@@ -17,7 +18,7 @@ import argparse
 import imutils
 import random
 import cv2
-#import sys
+import sys
 
 # construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()
@@ -30,7 +31,7 @@ ap.add_argument("-a", "--approx-images", type=int, default=250,
 ap.add_argument("-b", "--max-buffer-size", type=int, default=50000,
 	help="Maximum buffer size for # of features to be stored in memory")
 
-#sys.argv[1:] = '-d output/data/training -f output/training_features.hdf5'.split()
+sys.argv[1:] = '-d output/data/training -f output/training_features.hdf5'.split()
 args = vars(ap.parse_args())
 
 # initialize the keypoint detector, local invariant descriptor, and the descriptor
