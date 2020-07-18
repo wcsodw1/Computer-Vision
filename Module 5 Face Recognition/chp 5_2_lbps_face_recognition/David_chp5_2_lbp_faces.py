@@ -4,7 +4,7 @@ Created on Mon Apr 20 16:57:05 2020
 
 @author: user
 """
-# python lbp_faces.py --dataset caltech_faces
+# python David_chp5_2_lbp_faces.py --dataset caltech_faces
 
 # import the necessary packages
 from __future__ import print_function
@@ -23,7 +23,7 @@ ap = argparse.ArgumentParser()
 ap.add_argument("-d", "--dataset", required=True, help="path to CALTECH Faces dataset")
 ap.add_argument("-s", "--sample-size", type=int, default=21, help="# of example samples")
 
-sys.argv[1:] = '-d ../../image_datasets/caltech_faces'.split()
+sys.argv[1:] = '-d ../../../CV_PyImageSearch/Dataset/caltech_faces'.split()
 #sys.argv[1:] = '-d image_datasets/caltech_faces'.split()
 
 args = vars(ap.parse_args())
@@ -36,7 +36,9 @@ print("[INFO] loading CALTECH Faces dataset...")
 # encode the labels, transforming them from strings into integers since OpenCV does
 # not like strings as training data
 le = LabelEncoder()
+print("le : ", le)
 le.fit_transform(training.target)
+print("le.fit_transform : ", le)
 
 # handle if we are creating the LBP face recognizer for OpenCV 2.4
 if imutils.is_cv2():
@@ -60,11 +62,13 @@ for i in range(0, len(testing.data)):
 	print("{} of {}".format(str(i), str(len(testing.data))))
 	# classify the face and update the list of predictions and confidence scores
 	(prediction, conf) = recognizer.predict(testing.data[i])
+	print("prediction : ", prediction)
+	print("conf : ", conf)
 	predictions.append(prediction)
 	confidence.append(conf)
 
     # show the classification report
-print(classification_report(le.transform(testing.target), predictions,
+print("Classification Report: ",classification_report(le.transform(testing.target), predictions,
 	target_names=np.unique(names)))
 
 # loop over the the desired number of samples
