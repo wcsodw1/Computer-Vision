@@ -7,3 +7,7 @@
    ### CHP 5.3 - Eigenface Algorithm : 
    
        - From there, we flatten each image into a vector and store them in a matrix(Image_Data.mat)
+       
+       
+   ### CHP 5.4 - Create your own face data : 
+       - Generate the face data ourself 
