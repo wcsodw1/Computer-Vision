@@ -33,12 +33,17 @@ print("[INFO] loading CALTECH Faces dataset...")
 (training, testing, names) = load_caltech_faces(args["dataset"], min_faces=21,
 	test_size=0.25)
 
+print("Training : ",training)
+print("Testing : ",testing)
+print("Names : ",names)
+
 # encode the labels, transforming them from strings into integers since OpenCV does
 # not like strings as training data
+print("TRPE-LabelEncoder ",type(LabelEncoder))
 le = LabelEncoder()
-print("le : ", le)
+print("le : ", type(le))
 le.fit_transform(training.target)
-print("le.fit_transform : ", le)
+print("le.fit_transform : ", type(le))
 
 # handle if we are creating the LBP face recognizer for OpenCV 2.4
 if imutils.is_cv2():
@@ -62,8 +67,8 @@ for i in range(0, len(testing.data)):
 	print("{} of {}".format(str(i), str(len(testing.data))))
 	# classify the face and update the list of predictions and confidence scores
 	(prediction, conf) = recognizer.predict(testing.data[i])
-	print("prediction : ", prediction)
-	print("conf : ", conf)
+	print("prediction : ", prediction) # The value of LBP
+	print("conf : ", conf) # conf : prediction class 
 	predictions.append(prediction)
 	confidence.append(conf)
 
