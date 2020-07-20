@@ -5,7 +5,7 @@ Created on Mon Apr 20 17:27:11 2020
 @author: user
 """
 
-# python eigenfaces.py --dataset caltech_faces
+# python David_5_3_eigenfaces.py --dataset caltech_faces
 
 # import the necessary packages
 from __future__ import print_function
@@ -50,7 +50,7 @@ ap.add_argument("-v", "--visualize", type=int, default=-1,
 	help="whether or not PCA components should be visualized")
 
 # python eigenfaces.py --dataset caltech_faces
-sys.argv[1:] = '-d ../../Image_datasets/caltech_faces'.split()
+sys.argv[1:] = '-d ../../../CV_PyImageSearch/Dataset/caltech_faces'.split()
 args = vars(ap.parse_args())
 
 

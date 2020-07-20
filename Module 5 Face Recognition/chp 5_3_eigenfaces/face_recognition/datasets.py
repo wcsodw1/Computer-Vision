@@ -10,7 +10,9 @@ def load_caltech_faces(datasetPath, min_faces=10, face_size=(47, 62), equal_samp
 	test_size=0.33, seed=42, flatten=False):
 	# grab the image paths associated with the faces, then load the bounding box data
 	imagePaths = sorted(list(paths.list_images(datasetPath)))
+	print(imagePaths)
 	bbData = io.loadmat("{}/ImageData.mat".format(datasetPath))
+	print(imagePaths)
 	bbData = bbData["SubDir_Data"].T
 
 	# set the random seed, then initialize the data matrix and labels
