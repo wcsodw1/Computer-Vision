@@ -35,6 +35,7 @@ cv2.waitKey(0)
 
     # 3.1  load the face detector 
 detector = cv2.CascadeClassifier("../../../detector/haarcascade.xml")
+
 print(detector) 
     # 3.2 detect faces in the image
 rects = detector.detectMultiScale(gray, scaleFactor = 1.3, minNeighbors = 9,
@@ -55,4 +56,4 @@ cv2.imshow("Faces", gray)
 cv2.waitKey(0) # Visualize the image until手動把它關閉
     # imwrite :  Save the converted image
 cv2.imwrite("../../data/imwrite/chp1_1/basketball_box.jpg", image) 
-cv2.imwrite("../../data/imwrite/chp1_1/basketball_gray_box.jpg", gray) 
+cv2.imwrite("../../data/imwrite/chp1_1/basketball_gray_box.jpg", gray)
