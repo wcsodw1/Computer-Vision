@@ -1,4 +1,5 @@
-# python David_2_2_2_train_detector.py --class "../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp2_2_stop_sign/stop_sign_images --annotations ../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp2_2_stop_sign/stop_sign_annotations --output ../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp2_2_stop_sign/output/2020_StopSignTest.svm'
+# python David_2_2_2_train_detector.py
+
 # import the necessary packages
 from __future__ import print_function
 from imutils import paths
@@ -25,7 +26,7 @@ ap.add_argument("-o", "--output", required=True,
 # import sys 
 # sys.argv[1:] = '-c stop_sign_images -a stop_sign_annotations -o output/stop_sign_detector.svm'.split()
 # sys.argv[1:] = '-c Airplane/image -a Airplane/annotations -o Airplane/output/airplane.svm'.split()
-sys.argv[1:] = '-c ../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp2_2_stop_sign/stop_sign_images -a ../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp2_2_stop_sign/stop_sign_annotations -o ../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp2_2_stop_sign/output/2020_StopSignTest.svm'.split()
+sys.argv[1:] = '-c ../../../CV_PyImageSearch/Dataset/caltech101/101_ObjectCategories/Faces_easy -a ../../../CV_PyImageSearch/Dataset/caltech101/Annotations/Faces_easy -o output/20200724_Face_Detector.svm'.split()
 
 args = vars(ap.parse_args())
 
@@ -40,33 +41,25 @@ boxes = []
 
 # loop over the image paths
 for imagePath in paths.list_images(args["class"]):
-    # extract the image ID from the image path and load the annotations file
-    imageID = imagePath[imagePath.rfind("/") + 1:].split("_")[1]
-    #print(imageID)
-    id1= imagePath.find("\\")
-    #print(id1)
-    id2= imagePath[id1+1:]
-    #print(id2)
-    imageID = id2.replace(".jpg", "")
-    #print(imageID)
-    str = imageID[6:]
-    #print(str)
-    #dir= "./Airplane1/annotations/"
-    dir= "./stop_sign_annotations/"
-    #print(dir)
-    p = "{}annotation_{}.mat".format(dir, str)
-    #print(p)
-    annotations = loadmat(p)["box_coord"]
-    #print(annotations)
-    bb = [dlib.rectangle(left=long(x), top=long(y), right=long(w), bottom=long(h)) 
-        for (y, h, x, w) in annotations]
-    #print(bb)
-    boxes.append(bb)    
-    #print(boxes)
-    #print(len(boxes))
-    # add the image to the list of images
-    images.append(io.imread(imagePath))
-    #print(images)
+	# extract the image ID from the image path and load the annotations file
+	imageID = imagePath[imagePath.rfind("/") + 1:].split("_")[2]
+	#print(imageID)
+	imageID = imageID.replace(".jpg", "")
+	#print(imageID)
+	p = "{}/annotation_{}.mat".format(args["annotations"], imageID)
+	#print(p)
+	annotations = loadmat(p)["box_coord"]
+	#print(annotations) # Bondingbox's 4 value
+
+	# loop over the annotations and add each annotation to the list of bounding
+	# boxes
+	bb = [dlib.rectangle(left=long(x), top=long(y), right=long(w), bottom=long(h))
+			for (y, h, x, w) in annotations]
+	boxes.append(bb)
+	#print(boxes)
+
+	# add the image to the list of images
+	images.append(io.imread(imagePath))
 
 # train the object detector
 print("[INFO] training detector...")
