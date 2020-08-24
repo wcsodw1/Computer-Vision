@@ -1,6 +1,6 @@
 # Computer-Vision Module 4
 
-   ###    - Chp4.6 : Bag of visual words for classification : 
+###    A.Chp 4.6 - A.Bag of visual words for classification : 
     
         - 1.index_features.py : Generate the "feature-extracted data file" (.hdf5) by using image dataset 
         
@@ -13,7 +13,7 @@
         - 5.test_model.py : Test the image classification for 5 different class
    
     
-   ###  - Chp 4.7 : A different type of image pyramid : 
+###  B.Chp 4.7 - A different type of image pyramid : 
     
         - 1.Sample_datasets.py : "Grab the data" and "generate an image dataset" for us to use.
             - Input : The Training Dataset's(by Class inthis case) image need to be exist 
