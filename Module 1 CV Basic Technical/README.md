@@ -10,7 +10,7 @@ The PyimageSearch-Optimized Project & AIA Academy CV related project
 -  What is RGB ? <br>
 ![image](Result_Image/chp_1_2_RGB.png)<br>
 
-- Briefly express CNN(Convolution Neural Network)<br>
+- Briefly express the principle in CNN(Convolution Neural Network)<br>
 ![image](Result_Image/chp_1_5_RealExampleInConvolution.png)<br>
 
 - Talk about HUE<br>
