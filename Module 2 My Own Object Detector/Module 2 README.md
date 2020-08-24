@@ -32,5 +32,3 @@
                 [INFO] avg. width:  184.46 
                 [INFO] avg. height: 62.01
                 [INFO] aspect ratio: 2.97
-        
-    - Chp2.6 : 
