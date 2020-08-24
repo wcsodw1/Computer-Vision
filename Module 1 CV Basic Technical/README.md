@@ -16,6 +16,7 @@ The PyimageSearch-Optimized Project & AIA Academy CV related project
 - Talk about HUE<br>
 ![image](Result_Image/chp_1_8_HUE.png)<br>
 
+- Talk about LAB<br>
 ![image](Result_Image/chp_1_8_WhatIsLAB.png)<br>
 
 
