@@ -1,5 +1,4 @@
-# Computer-Vision
-The PyimageSearch-Optimized Project & AIA Academy CV related project
+#  Computer-Vision Module 6 - Automatic License Plate Recognition
 
-![image](chp_1_0_basletball.png)
+![image](data/car.png)
 
