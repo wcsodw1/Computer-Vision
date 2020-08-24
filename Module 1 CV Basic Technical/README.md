@@ -2,7 +2,7 @@
 
 The PyimageSearch-Optimized Project & AIA Academy CV related project
 
-## CV Basic Theory and Apply
+## CV Basic Theory and Implement
 
 
 ### A.Basic-Theory : 
