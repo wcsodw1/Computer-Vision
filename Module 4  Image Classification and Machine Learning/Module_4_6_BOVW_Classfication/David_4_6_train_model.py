@@ -44,7 +44,7 @@ ap.add_argument("-m", "--model", required=True,
 # python train_model.py --dataset caltech5 --features-db output/features.hdf5 --bovw-db output/bovw.hdf5 \
 #	--model output/model.cpickle
 
-# sys.argv[1:] = '-d caltech5 -f output/features.hdf5 -b output/bovw.hdf5 -m output/model.cpickle'.split()
+sys.argv[1:] = '-d caltech5 -f output/features.hdf5 -b output/bovw.hdf5 -m output/model.cpickle'.split()
 
 args = vars(ap.parse_args())
 
