@@ -9,23 +9,23 @@
 
 ![image](Result_Image/chp_5_2_LBS_FaceRecognition.png) <br>
 
-<LBS_component>
+     <LBS_component> <br>
 ![image](Result_Image/chp_5_3_LBS_component.png) <br>
 
    ### CHP 5.3 - Eigenface Algorithm : 
        - perform better in "caltech faces" in LBP Algorithm
        - From there, we flatten each image into a vector and store them in a matrix(Image_Data.mat)
        
-<Face_Euclidean_Distance>
+    <Face_Euclidean_Distance> <br>
 ![image](Result_Image/chp_5_3_Face_Euclidean_Distance.png) <br>
 
-<Image_Flatten>
+    <Image_Flatten> <br>
 ![image](Result_Image/chp_5_3_Image_Flatten.png) <br>
 
-<Image_Matrix>
+    <Image_Matrix> <br>
 ![image](Result_Image/chp_5_3_The_Image_Matrix.png) <br>
 
-<Mean_Face_Image>
+    <Mean_Face_Image> <br>
 ![image](Result_Image/chp_5_3_Mean_Face_Image.png) <br>
 
    ### CHP 5.4 - Create your own face data : 
