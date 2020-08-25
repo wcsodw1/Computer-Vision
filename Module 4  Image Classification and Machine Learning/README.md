@@ -1,5 +1,12 @@
 # Computer-Vision Module 4
 
+![image](Result_Image/chp_4_6_caltech5_dataset.png) <br>
+
+![image](Result_Image/chp_4_6_SIFT.png) <br>
+
+![image](Result_Image/chp_4_7_Spatial_Pyramids.png) <br>
+
+
 ###    A. Chp 4.6 - A.Bag of visual words for classification : 
     
          1.index_features.py : Generate the "feature-extracted data file" (.hdf5) by using image dataset 
@@ -12,7 +19,9 @@
         
          5.test_model.py : Test the image classification for 5 different class
    
-    
+![image](Result_Image/chp_4_6_Classified_TestOwnImage.png) <br>
+
+
 ###  B. Chp 4.7 - A different type of image pyramid : 
     
          1.Sample_datasets.py : "Grab the data" and "generate an image dataset" for us to use.
@@ -38,4 +47,5 @@
             - Input : Testing Dataset's image(Parameter)/ Clustering data(vocab.cpickle) file/ classifier(ex : model_L4.cpickle) /PBOW-Clustering Data(training_features.hdf5)/ level of pyramid (should be the same with "Level Pyramid Trained-model(Control by extracted_pbow.py file)")
             - Output : The "result" of "random image classification"
             
-        
+![image](Result_Image/chp_4_7_Testing_Image.png) <br>
+   
