@@ -35,3 +35,6 @@
                 
 ![image](Result_Image/chp_2_1_Template_Detector.png) <br>
 
+![image](Result_Image/chp_2_2_Customize_Detector.png) <br>
+
+![image](Result_Image/chp_2_2_Test_Detector.png) <br>
