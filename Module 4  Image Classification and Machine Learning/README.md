@@ -19,7 +19,7 @@
         
          5.test_model.py : Test the image classification for 5 different class
    
-![image](Result_Image/chp_4_6_Classified_TestOwnImage.png) <br>
+![image](Result_Image/chp_4_6_Classified_Result.png) <br>
 
 
 ###  B. Chp 4.7 - A different type of image pyramid : 
