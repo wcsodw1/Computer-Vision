@@ -32,3 +32,6 @@
                 [INFO] avg. width:  184.46 
                 [INFO] avg. height: 62.01
                 [INFO] aspect ratio: 2.97
+                
+![image](Result_Image/chp_2_1_Template_Detector.png) <br>
+
