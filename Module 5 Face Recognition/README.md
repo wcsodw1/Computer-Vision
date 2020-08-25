@@ -9,23 +9,23 @@
 
 ![image](Result_Image/chp_5_2_LBS_FaceRecognition.png) <br>
 
-     <LBS_component> <br>
+   #### <LBS_component> 
 ![image](Result_Image/chp_5_3_LBS_component.png) <br>
 
    ### CHP 5.3 - Eigenface Algorithm : 
        - perform better in "caltech faces" in LBP Algorithm
        - From there, we flatten each image into a vector and store them in a matrix(Image_Data.mat)
        
-    <Face_Euclidean_Distance> <br>
+   #### <Face_Euclidean_Distance> 
 ![image](Result_Image/chp_5_3_Face_Euclidean_Distance.png) <br>
 
-    <Image_Flatten> <br>
+   #### <Image_Flatten> 
 ![image](Result_Image/chp_5_3_Image_Flatten.png) <br>
 
-    <Image_Matrix> <br>
+   #### <Image_Matrix> 
 ![image](Result_Image/chp_5_3_The_Image_Matrix.png) <br>
 
-    <Mean_Face_Image> <br>
+   #### <Mean_Face_Image> 
 ![image](Result_Image/chp_5_3_Mean_Face_Image.png) <br>
 
    ### CHP 5.4 - Create your own face data : 
@@ -45,5 +45,6 @@
 
        - 3.recognize.py :  Start to recognize the(your) face
            - Output : From the camera we can saw the object detection in your face including recognize your name on it.
-           
+   
+  #### < Prediction >         
 ![image](Result_Image/chp_5_5_BondBoxwithClassification.png) <br>
