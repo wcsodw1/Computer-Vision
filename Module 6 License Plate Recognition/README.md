@@ -2,5 +2,5 @@
 
 ### Automatic License-Plate On My Car :
 
-![image](data/car.png)
+![image](data/Car_Label.png)
 
