@@ -6,5 +6,7 @@
 - Input : Image, argument : The path to the folder of image
 - Output : The "Extracting keypoints and "invariant descriptors" (.hdf5) file
 
+![image](Result_Image/SIFT.png) <br>
+![image](Result_Image/SIFTExtract.png) <br>
 ![image](Result_Image/HDF5.jpg) <br>
 ![image](Result_Image/HDF5.png) <br>
