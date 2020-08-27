@@ -2,10 +2,6 @@
 
 ![image](Result_Image/chp_4_6_caltech5_dataset.png) <br>
 
-![image](Result_Image/SIFT.png) <br>
-
-![image](Result_Image/SIFTExtract.png) <br>
-
 
 ###    A. Chp 4.6 - A.Bag of visual words for classification : 
     
