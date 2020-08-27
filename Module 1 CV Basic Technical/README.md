@@ -9,11 +9,8 @@ The PyimageSearch-Optimized Project & AIA Academy CV related project
 
 -  What is RGB ? <br>
 ![image](Result_Image/chp_1_2_RGB.png) <br>
-
-- Talk about HSV <br>
+-  HSV & LAB Color Space <br>
 ![image](Result_Image/HSV_color.png) <br>
-
-- Talk about LAB <br>
 ![image](Result_Image/LAB.png) <br>
 
 
@@ -21,6 +18,5 @@ The PyimageSearch-Optimized Project & AIA Academy CV related project
 
 - Gradient in Real Image<br>
 ![image](Result_Image/chp_1_6_Gradient2.png) <br>
-
 - OTSU Thresholding Effect<br>
 ![image](Result_Image/chp_1_9_1_OTSU_Thresholding.png) <br>
