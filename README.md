@@ -2,14 +2,12 @@
 
 The PyimageSearch-Optimized Project & AIA Academy CV related project
 
-##  1.Automatic Object-Detection : 
-
-
+## 1.Object-Detection : 
 
 ![image](data/chp_1_0_basletball.png)
 
 
-## 2.Face-Detection : 
+## 2.Automatic Face-Detection : 
 
 - Facila Detection in Multi-Person
 
@@ -17,7 +15,7 @@ The PyimageSearch-Optimized Project & AIA Academy CV related project
 
 ## 3.Image-Classfication : 
 
-- 5 Different Object classification 
+- Test image-classification in 5-Object :
 
     - A.Face 
     - B.Guitar
@@ -30,7 +28,7 @@ The PyimageSearch-Optimized Project & AIA Academy CV related project
 
 ## 4.Automatic License-Plate Recognition  :
 
-- Test on my Car 
+- Test on my Car :
 
 ![image](data/Car_Label.png)
 
