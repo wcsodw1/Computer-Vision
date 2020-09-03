@@ -4,10 +4,14 @@ The PyimageSearch-Optimized Project & AIA Academy CV related project
 
 ##  1.Automatic Object-Detection : 
 
+
+
 ![image](data/chp_1_0_basletball.png)
 
 
 ## 2.Face-Detection : 
+
+- Facila Detection in Multi-Person
 
 ![image](data/chp_2_2_Test_Detector.png)
 
