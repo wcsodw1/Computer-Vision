@@ -9,7 +9,7 @@ The PyimageSearch-Optimized Project & AIA Academy CV related project
 
 ## 2.Automatic Face-Detection : 
 
-- Facila Detection in Multi-Person
+- Facial Detection in Multi-Person
 
 ![image](data/chp_2_2_Test_Detector.png)
 
