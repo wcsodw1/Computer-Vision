@@ -13,10 +13,18 @@ The PyimageSearch-Optimized Project & AIA Academy CV related project
 
 ## 3.Image-Classfication : 
 
+- 5 Different Object classification 
+
+    - A.Face 
+    - B.Guitar
+    - C.Car
+    - D.Motorbike
+    - E.Airplane
+
 ![image](data/chp_4_6_Classified_Result.png)
 
 
-## 4.Automative License-Plate Recognition  :
+## 4.Automatic License-Plate Recognition  :
 
 - Test on my Car 
 
