@@ -9,6 +9,8 @@ Created on Thu Apr 16 21:53:02 2020
 
 # (Set your own Path with image)python David_4_6_test_model.py --images "../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp_4_6_BOVW_Classification/test_images" --codebook "../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp_4_6_BOVW_Classification/vocab.cpickle" --model "../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp_4_6_BOVW_Classification/model.cpickle"
 
+# (Set your own Path with image)python David_4_6_test_model.py --images "../../data/test_data" --codebook "../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp_4_6_BOVW_Classification/vocab.cpickle" --model "../../../CV_PyImageSearch/Dataset/Chapter_Specific/chp_4_6_BOVW_Classification/model.cpickle"
+
     # import the necessary packagess
 from __future__ import print_function
 from SubModule.descriptors import DetectAndDescribe

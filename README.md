@@ -11,7 +11,7 @@ The PyimageSearch-Optimized Project & AIA Academy CV related project
 
 - Facial Detection in Multi-Person
 
-![image](data/chp_2_2_Test_Detector.png)
+![image](data/Multi_Face.JPG)
 
 ## 3.Image-Classfication : 
 
