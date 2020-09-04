@@ -4,6 +4,8 @@ The PyimageSearch-Optimized Project & AIA Academy CV related project
 
 ## 1.Object-Detection : 
 
+![image](data/2.png)
+
 ![image](data/chp_1_0_basletball.png)
 
 
