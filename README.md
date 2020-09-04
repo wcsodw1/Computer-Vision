@@ -6,14 +6,15 @@ The PyimageSearch-Optimized Project & AIA Academy CV related project
 
 ![image](data/2.png)
 
-![image](data/chp_1_0_basletball.png)
 
 
 ## 2.Automatic Face-Detection : 
 
 - Facial Detection in Multi-Person
 
-![image](data/Multi_Face.JPG)
+![image](data/chp_1_0_basletball.png)
+
+![image](data/Multi_Face2.JPG)
 
 ## 3.Image-Classfication : 
 
