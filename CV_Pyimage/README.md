@@ -33,11 +33,15 @@ The PyimageSearch-Optimized Project & AIA Academy CV related project
         （2）閉運算是通過填充圖像的凹角來濾波圖像的。
         （3）結構元素大小的不同將導致濾波效果的不同。
         （4）不同結構元素的選擇導致了不同的分割。
-    - 4.
+    - 4.禮帽運算/ 黑帽運算
         - MORPH_TOPHAT : It can be used to enhance the contrast of bright features in an image
+            - 禮帽運算是用原始影像減去開運算影像操作 禮帽運算能夠取得影像的雜訊資訊，或獲得比原始影像的邊緣更亮的邊緣資訊
         - MORPH_BLACKHAT : It can be used to enhance the contrast of dark features in an image
+            - 黑帽運算是用原始影像減去閉運算影像操作。黑帽運算能夠取得影像內部的小孔，或前景色中的小黑點，或獲得比原始影像的邊緣更暗的邊緣資訊
         (!) 該演算法可以用於影像識別的預處理，用於影像二值化後取出孤立點
-    - 5.1 梯度 = 膨脹 - 腐蝕 = 明顯的邊緣(AOI)
+    - 5.1 形態學梯度運算
+        - 梯度 = 膨脹 - 腐蝕 = 明顯的邊緣(AOI)
+        - 形態學梯度運算是用影像的膨脹影像減腐蝕影像的操作，該操作可以取得原始影像中前景影像的邊緣 
     - 6.1 檢測邊緣 : 
         - 形態學檢測邊緣的原理很簡單，在膨脹時，影像中的物體會向周圍“擴張”；腐蝕時，影像的額物體會“收縮”。
 
