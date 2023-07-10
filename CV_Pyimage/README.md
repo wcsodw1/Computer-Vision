@@ -2,7 +2,16 @@
 
 The PyimageSearch-Optimized Project & AIA Academy CV related project
 
+# Theorem & CV tool : 
+- 1.opencv  
+    - cv2.CascadeClassifier : face detector 
+    - cv2.haarcascade : 
+    - detectMultiScale.detectMultiScale : detect faces
+    - 
+- 2.
+- 3.
 
+# Apply : 
 ## 1.Automatic Face-Detection : 
 
 ### Facial Detection : 
