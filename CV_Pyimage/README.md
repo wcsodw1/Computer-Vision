@@ -5,7 +5,8 @@ The PyimageSearch-Optimized Project & AIA Academy CV related project
 # Theorem & CV tool : 
 - 1.opencv  
     - cv2.CascadeClassifier : face detector 
-    - cv2.haarcascade : 
+    - cv2.haarcascade : haar feature classifier（特徵分類器), including multiple face object detect
+        - [reference : With multiple face object detect](https://blog.csdn.net/itismelzp/article/details/50379359)
     - detectMultiScale.detectMultiScale : detect faces
     - 
 - 2.
