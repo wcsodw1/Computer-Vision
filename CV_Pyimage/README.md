@@ -7,7 +7,7 @@ The PyimageSearch-Optimized Project & AIA Academy CV related project
     # Classifier 
         - cv2.CascadeClassifier : Multiple classifier 
         - cv2.haarcascade : haar feature classifier（特徵分類器), including multiple face object detect
-            - [reference : With multiple face object detect classifier](https://blog.csdn.net/itismelzp/article/details/50379359)
+       [reference With multiple face object detect classifier](https://blog.csdn.net/itismelzp/article/details/50379359)
     - cv2.detectMultiScale.detectMultiScale : Faces detect function
     - cv2.warpAffine : image shifting function(平移影像)
     - cv2.getRotationMatrix2D() 旋轉影像 
@@ -48,10 +48,6 @@ The PyimageSearch-Optimized Project & AIA Academy CV related project
     - 6.2 檢測角點（拐角）: 
         - 所不同的是先用十字形的結構元素膨脹畫素，這種情況下只會在邊緣處“擴張”，角點不發生變化。接著用菱形的結構元素腐蝕原影像，導致只有在拐角處才會“收縮”，而直線邊緣都未發生變化。
 　　    第二步是用X行膨脹原影像，焦點膨脹的比邊要多。這樣第二次用方塊腐蝕時，角點恢復原狀，而邊要腐蝕的更多。所以當兩幅影像相減時，只保留了拐角處
-
-
-
-
 
  
 - 2.imutils.translate :  a series of convenience functions to make basic image processing functions such as translation, rotation, resizing, skeletonization, and displaying images easier with OpenCV
